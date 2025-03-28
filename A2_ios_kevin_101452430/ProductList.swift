@@ -50,7 +50,13 @@ extension ProductListViewController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
         if searchText.isEmpty{
             isSearching = false
+        }else{
+            isSearching = true
+            filteredProducts = products.filter {
+               
+            }
         }
+        tableView.reloadData()
     }
 }
 
