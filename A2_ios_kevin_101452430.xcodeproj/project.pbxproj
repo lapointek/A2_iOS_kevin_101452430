@@ -13,6 +13,7 @@
 		4A18CEC32D95FA7400BB1B70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A18CEC22D95FA7400BB1B70 /* Preview Assets.xcassets */; };
 		4A18CEC52D95FA7400BB1B70 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A18CEC42D95FA7400BB1B70 /* Persistence.swift */; };
 		4A18CEC82D95FA7400BB1B70 /* A2_ios_kevin_101452430.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A18CEC62D95FA7400BB1B70 /* A2_ios_kevin_101452430.xcdatamodeld */; };
+		4A18CECF2D96045F00BB1B70 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A18CECE2D96045F00BB1B70 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		4A18CEC22D95FA7400BB1B70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4A18CEC42D95FA7400BB1B70 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4A18CEC72D95FA7400BB1B70 /* A2_ios_kevin_101452430.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = A2_ios_kevin_101452430.xcdatamodel; sourceTree = "<group>"; };
+		4A18CECE2D96045F00BB1B70 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				4A18CEBF2D95FA7400BB1B70 /* Assets.xcassets */,
 				4A18CEC42D95FA7400BB1B70 /* Persistence.swift */,
 				4A18CEC62D95FA7400BB1B70 /* A2_ios_kevin_101452430.xcdatamodeld */,
+				4A18CECE2D96045F00BB1B70 /* Product.swift */,
 				4A18CEC12D95FA7400BB1B70 /* Preview Content */,
 			);
 			path = A2_ios_kevin_101452430;
@@ -145,6 +148,7 @@
 			files = (
 				4A18CEC52D95FA7400BB1B70 /* Persistence.swift in Sources */,
 				4A18CEBE2D95FA7300BB1B70 /* ContentView.swift in Sources */,
+				4A18CECF2D96045F00BB1B70 /* Product.swift in Sources */,
 				4A18CEBC2D95FA7300BB1B70 /* A2_ios_kevin_101452430App.swift in Sources */,
 				4A18CEC82D95FA7400BB1B70 /* A2_ios_kevin_101452430.xcdatamodeld in Sources */,
 			);
