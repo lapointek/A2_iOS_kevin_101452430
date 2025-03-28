@@ -62,5 +62,6 @@ extension ProductListViewController: UISearchBarDelegate{
 }
 
 @IBAction func addProduct(_ sender: Any){
+    let alert = UIAlertController(title: "Add Product", message: nil, preferredStyle: .alert)
     
 }
