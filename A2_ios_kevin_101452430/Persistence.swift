@@ -1,10 +1,3 @@
-//
-//  Persistence.swift
-//  A2_ios_kevin_101452430
-//
-//  Created by Kevin Lapointe on 2025-03-27.
-//
-
 import CoreData
 
 struct PersistenceController {
