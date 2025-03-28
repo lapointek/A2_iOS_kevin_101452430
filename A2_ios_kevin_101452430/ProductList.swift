@@ -63,5 +63,8 @@ extension ProductListViewController: UISearchBarDelegate{
 
 @IBAction func addProduct(_ sender: Any){
     let alert = UIAlertController(title: "Add Product", message: nil, preferredStyle: .alert)
-    
+    alert.addTextField{$0.placeholder = "Product Name"}
+    alert.addTextField{$0.placeholder = "Produt Description"}
+    alert.addTextField{$0.placeholder = "Product Price"}
+    alert.addTextField{$0.placeholder = "Product Provider"}
 }
