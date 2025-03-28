@@ -14,25 +14,32 @@ class ProductListViewController: UIViewController{
         fetchProducts()
         tableView.reloadData()
     }
-    func fetchProducts(){
-        guard let applDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            
-        return }
-        let context = appDelegate.persitnentContrainer.viewContext
-        let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
+    
+    @IBAction func addProduct(_ sender: Any){
+        let alert = UIAlertController(title: "Add Product", message: nil, preferredStyle: .alert)
+        alert.addTextField{$0.placeholder = "Product Name"}
+        alert.addTextField{$0.placeholder = "Produt Description"}
+        alert.addTextField{$0.placeholder = "Product Price"}
+        alert.addTextField{$0.placeholder = "Product Provider"}
         
         do{
-            products = try context.fetch(fetchRequest)
+            try context.save()
+            self.fetchProducts()
+            self.tableView.reloadData()
         }catch{
-            print("Failed to fetch products: \(error)")
+            print("Faile to save product: \(error)")
         }
+        
+        alert.addAction(addAction)
+        alert.addAction(UIAlertAction(title: "cancel", style: .cancel))
+        present(alert, animated: true)
+        
     }
-}
-
+    
 extension ProductListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     
-    return isSearching ? filteredProducts.count : prodcuts.count
+    return isSearching ? filteredProducts.count : products.count
     
 }
 
@@ -60,24 +67,20 @@ extension ProductListViewController: UISearchBarDelegate{
         tableView.reloadData()
     }
 }
-
-@IBAction func addProduct(_ sender: Any){
-    let alert = UIAlertController(title: "Add Product", message: nil, preferredStyle: .alert)
-    alert.addTextField{$0.placeholder = "Product Name"}
-    alert.addTextField{$0.placeholder = "Produt Description"}
-    alert.addTextField{$0.placeholder = "Product Price"}
-    alert.addTextField{$0.placeholder = "Product Provider"}
     
-    do{
-        try context.save()
-        self.fetchProducts()
-        self.tableView.reloadData()
-    }catch{
-        print("Faile to save product: \(error)")
+    func fetchProducts(){
+        guard let applDelegate = UIApplication.shared.delegate as? AppDelegate else{
+            
+        return }
+        let context = appDelegate.persitnentContrainer.viewContext
+        let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
+        
+        do{
+            products = try context.fetch(fetchRequest)
+        }catch{
+            print("Failed to fetch products: \(error)")
+        }
     }
-    
-    alert.addAction(addAction)
-    alert.addAction(UIAlertAction(title: "cancel", style: .cancel))
-    present(alert, animated: true)
-    
 }
+
+
