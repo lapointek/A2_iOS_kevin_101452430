@@ -75,4 +75,7 @@ extension ProductListViewController: UISearchBarDelegate{
     }catch{
         print("Faile to save product: \(error)")
     }
+    
+    alert.addAction(addAction)
+    
 }
