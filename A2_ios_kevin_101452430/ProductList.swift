@@ -53,8 +53,9 @@ extension ProductListViewController: UISearchBarDelegate{
         }else{
             isSearching = true
             filteredProducts = products.filter {
-               
-            }
+                product in
+                return product.productName !.lowercased().contains(searchText.lowercased()) ||
+                product.productDescription!.lowercased().contains(searchText.lowercased())            }
         }
         tableView.reloadData()
     }
