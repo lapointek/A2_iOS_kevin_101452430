@@ -61,6 +61,6 @@ extension ProductListViewController: UISearchBarDelegate{
     }
 }
 
-
-
-
+@IBAction func addProduct(_ sender: Any){
+    
+}
