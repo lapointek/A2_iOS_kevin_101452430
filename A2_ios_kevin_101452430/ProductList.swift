@@ -46,4 +46,10 @@ UITableViewCell {
     return cell
 }
 
+extension ProductListViewController: UISearchBarDelegate{
+    
+}
+
+
+
 
