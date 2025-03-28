@@ -67,4 +67,12 @@ extension ProductListViewController: UISearchBarDelegate{
     alert.addTextField{$0.placeholder = "Produt Description"}
     alert.addTextField{$0.placeholder = "Product Price"}
     alert.addTextField{$0.placeholder = "Product Provider"}
+    
+    do{
+        try context.save()
+        self.fetchProducts()
+        self.tableView.reloadData()
+    }catch{
+        print("Faile to save product: \(error)")
+    }
 }
