@@ -77,4 +77,7 @@ extension ProductListViewController: UISearchBarDelegate{
     }
     
     alert.addAction(addAction)
-    alert.addAction(UIAlertAction(title: "cancel", style: .cancel))}
+    alert.addAction(UIAlertAction(title: "cancel", style: .cancel))
+    present(alert, animated: true)
+    
+}
