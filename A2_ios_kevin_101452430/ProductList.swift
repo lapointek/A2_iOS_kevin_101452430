@@ -47,7 +47,11 @@ UITableViewCell {
 }
 
 extension ProductListViewController: UISearchBarDelegate{
-    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+        if searchText.isEmpty{
+            isSearching = false
+        }
+    }
 }
 
 
